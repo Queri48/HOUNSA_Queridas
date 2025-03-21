@@ -13,7 +13,9 @@ class CategorieController extends Controller
     {
         $categories = Categorie::all();
 
-        return view('admin.categorie.list',);
+        return view('admin.categorie.list',[
+            'categories' => $categories
+        ]);
     }
 
     public function ajouter()
