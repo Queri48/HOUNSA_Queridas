@@ -33,10 +33,10 @@ class CategorieController extends Controller
 
     public function modifier($id)
     {
-        $categories = Categorie::findOrFail($id);
+        $categorie = Categorie::findOrFail($id);
 
         return view('admin.categorie.edit',[
-            'categories' => $categories
+            'categorie' => $categorie
         ]);
     }
 

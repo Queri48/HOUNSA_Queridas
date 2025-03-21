@@ -36,9 +36,12 @@ class OeuvreController extends Controller
 
     public function modifier($id)
     {
-        $oeuvres = Oeuvre::findOrFail($id);
+        $oeuvre = Oeuvre::findOrFail($id);
+        $categories = Categorie::all();
+
         return view('admin.oeuvre.edit',[
-            'oeuvres' => $oeuvres
+            'oeuvre' => $oeuvre,
+            'categories' => $categories
         ]);
     }
     public function modifier_traitement(Request $request, $id)

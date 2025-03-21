@@ -13,7 +13,7 @@
             <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                 <div class="col-12">
                     <label for="nom" class="form-label">Nom <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="nom" name="nom" value="{{ old('nom', $article->nom) }}" required>
+                    <input type="text" class="form-control" id="nom" name="nom" value="{{ old('nom', $categorie->nom) }}" required>
                     @error('nom')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
@@ -21,7 +21,7 @@
             </div>
             <div class="col-12">
                 <label for="description" class="form-label">Description <span class="text-danger">*</span></label>
-                <textarea class="form-control" id="description" name="description" rows="3" value="{{ old('description', $article->description) }}" required></textarea>
+                <textarea class="form-control" id="description" name="description" rows="3" value="{{ old('description', $categorie->description) }}" required></textarea>
                 @error('description')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
