@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('titre', 255);
             $table->string('artiste', 255);
-            $table->string('date_fabrication',10);
-            $table->date('date_acquisition');
-            $table->double('prix', 8, 2);
+            $table->string('annee_fabrication',10);
+            $table->string('date_acquisition',10);
+            $table->double('prix', 10, 2);
             $table->longText('description');
-            $table->string('photo',255);
+            $table->string('photo',255)->nullable();
             $table->foreignId('categorie_id')->nullable()->constrained('categories');
             $table->timestamps();
         });

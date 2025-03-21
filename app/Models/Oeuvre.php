@@ -9,7 +9,7 @@ class Oeuvre extends Model
     protected $fillable = [
         'titre',
         'artiste',
-        'date_fabrication',
+        'annee_fabrication',
         'date_acquisition',
         'prix',
         'description',
