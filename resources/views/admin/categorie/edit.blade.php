@@ -8,7 +8,7 @@
             </div>
         @endsession
         @dump($errors)
-        <form method="POST" action="{{ route('admin.categorie.modifier_traitement', categorie->id) }}">
+        <form method="POST" action="{{ route('admin.categorie.modifier_traitement', $categorie->id) }}">
             @csrf
             <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                 <div class="col-12">
