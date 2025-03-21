@@ -34,7 +34,7 @@ class OeuvreController extends Controller
         return redirect()->route('admin.oeuvre.liste');
     }
 
-    public function modifier()
+    public function modifier($id)
     {
         $oeuvres = Oeuvre::findOrFail($id);
         return view('admin.oeuvre.edit',[
